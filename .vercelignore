@@ -7,4 +7,15 @@ node_modules
 dist
 .vscode
 .idea
+hardhat.config.cjs
+foundry.toml
+artifacts
+build
+cache
+contracts
+scripts
+ignition
+test
+lib
+out
 

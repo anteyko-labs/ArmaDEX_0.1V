@@ -1,5 +1,12 @@
-require("@nomiclabs/hardhat-ethers");
-require("dotenv").config();
+// Hardhat config - only for local development
+// This file is ignored in Vercel builds via .vercelignore
+try {
+  require("@nomiclabs/hardhat-ethers");
+  require("dotenv").config();
+} catch (e) {
+  // Ignore if dependencies are not available (e.g., in Vercel build)
+  console.warn("Hardhat dependencies not available, skipping config");
+}
 
 module.exports = {
   solidity: {
