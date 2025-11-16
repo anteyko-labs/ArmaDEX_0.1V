@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TrendingUp, TrendingDown, Activity } from 'lucide-react';
-import { useRealData, useHistoricalData } from '../hooks/useRealData';
+import { useRealData } from '../hooks/useRealData';
 
 interface RealTimeChartProps {
   symbol: string;
@@ -12,7 +12,8 @@ export const RealTimeChart: React.FC<RealTimeChartProps> = ({
   timeframe = '1h' 
 }) => {
   const { getTokenPrice, getTokenChange } = useRealData();
-  const { data: historicalData, loading } = useHistoricalData(symbol, timeframe);
+  const [historicalData, setHistoricalData] = useState<Array<{ price: number; timestamp: number }>>([]);
+  const [loading, setLoading] = useState(true);
   const [currentPrice, setCurrentPrice] = useState(0);
   const [change, setChange] = useState(0);
 
@@ -45,7 +46,7 @@ export const RealTimeChart: React.FC<RealTimeChartProps> = ({
             fill="none"
             stroke={change >= 0 ? "#10B981" : "#EF4444"}
             strokeWidth="2"
-            points={historicalData.map((point, index) => {
+            points={historicalData.map((point: { price: number; timestamp: number }, index: number) => {
               const x = (index / (historicalData.length - 1)) * 100;
               const y = 100 - ((point.price - minPrice) / priceRange) * 100;
               return `${x},${y}`;

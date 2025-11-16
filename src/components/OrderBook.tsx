@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { tradingService, OrderBook } from '../services/tradingService';
+import { tradingService, OrderBook as OrderBookType } from '../services/tradingService';
 
 interface OrderBookProps {
   pair: string;
@@ -8,7 +8,7 @@ interface OrderBookProps {
 }
 
 export const OrderBook: React.FC<OrderBookProps> = ({ pair, basePrice, className = '' }) => {
-  const [orderBook, setOrderBook] = useState<OrderBook>({
+  const [orderBook, setOrderBook] = useState<OrderBookType>({
     asks: [],
     bids: [],
     lastUpdate: new Date().toISOString()

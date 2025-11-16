@@ -60,7 +60,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onDisconnect }) => {
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-3">
                 <Shield className="w-8 h-8 text-blue-primary" />
-                <span className="text-2xl font-bold">TradeShield</span>
+                <span className="text-2xl font-bold">ArmaDEX</span>
               </div>
 
               <div className="flex gap-2">

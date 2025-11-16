@@ -415,10 +415,6 @@ class RealBotService {
     console.log('✅ BTC токены добавлены всем ботам');
   }
 
-  // Получить ордербук для отображения
-  getOrderBook() {
-    return this.orders;
-  }
 }
 
 export const realBotService = new RealBotService();

@@ -17,8 +17,25 @@ if (typeof global !== 'undefined') {
   (global as any).Buffer = Buffer;
 }
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error('Root element not found!');
+}
+
+try {
+  createRoot(rootElement).render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+  console.log('✅ App rendered successfully');
+} catch (error) {
+  console.error('❌ Failed to render app:', error);
+  rootElement.innerHTML = `
+    <div style="padding: 20px; color: red;">
+      <h1>Failed to load app</h1>
+      <p>Error: ${String(error)}</p>
+      <p>Check console (F12) for details</p>
+    </div>
+  `;
+}

@@ -10,8 +10,8 @@ import '@rainbow-me/rainbowkit/styles.css';
 
 // Configure chains with BSC Testnet
 const config = getDefaultConfig({
-  appName: 'TradeShield',
-  projectId: 'YOUR_PROJECT_ID', // You can use a demo project ID for now
+  appName: 'ArmaDEX',
+  projectId: import.meta.env.VITE_WC_PROJECT_ID || 'bae1988f9fff8e3b8086760a5f45a362',
   chains: [mainnet, sepolia, arbitrum, polygon, bsc, bscTestnet],
   transports: {
     [mainnet.id]: http(),

@@ -176,6 +176,9 @@ export class RealTradingSystem {
       throw new Error('Owner private key not found');
     }
 
+    if (!this.provider) {
+      throw new Error('Provider not initialized');
+    }
     const ownerWallet = new ethers.Wallet(ownerPrivateKey, this.provider);
     const tokenContract = new ethers.Contract(
       TOKEN_ADDRESSES[token as keyof typeof TOKEN_ADDRESSES],

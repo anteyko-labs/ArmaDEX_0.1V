@@ -297,10 +297,6 @@ class UserOrderService {
     console.log(`🗑️ Очищены ордера старше ${daysToKeep} дней`);
   }
   
-  // Получить ордербук для отображения
-  getOrderBook() {
-    return this.orderBook;
-  }
 }
 
 export const userOrderService = new UserOrderService();

@@ -19,7 +19,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStartTrading }) => {
         <nav className="relative z-10 flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
           <div className="flex items-center gap-3">
             <Shield className="w-8 h-8 text-blue-primary" />
-            <span className="text-2xl font-bold text-white">TradeShield</span>
+            <span className="text-2xl font-bold text-white">ArmaDEX</span>
           </div>
           <Button onClick={onStartTrading} size="medium">
             Launch App
@@ -33,7 +33,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStartTrading }) => {
           </div>
 
           <h1 className="text-6xl font-bold text-white mb-6 animate-fade-in">
-            TradeShield
+            ArmaDEX
           </h1>
           <p className="text-2xl text-text-secondary mb-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
             MEV-Free Professional Exchange
@@ -69,7 +69,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStartTrading }) => {
       </div>
 
       <div className="max-w-7xl mx-auto px-8 py-20">
-        <h2 className="text-4xl font-bold text-center mb-4">Why Choose TradeShield?</h2>
+        <h2 className="text-4xl font-bold text-center mb-4">Why Choose ArmaDEX?</h2>
         <p className="text-text-secondary text-center mb-12 max-w-2xl mx-auto">
           Advanced MEV protection combined with professional trading tools
         </p>
@@ -127,7 +127,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStartTrading }) => {
               <h3 className="text-xl font-semibold">Community Driven</h3>
             </div>
             <p className="text-text-secondary mb-4">
-              Join thousands of traders who trust TradeShield. Earn rewards through staking and participate in governance.
+              Join thousands of traders who trust ArmaDEX. Earn rewards through staking and participate in governance.
             </p>
             <div className="flex items-center gap-2 text-sm text-green-profit">
               <Activity className="w-4 h-4" />
@@ -152,7 +152,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStartTrading }) => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Shield className="w-6 h-6 text-blue-primary" />
-              <span className="text-lg font-semibold">TradeShield</span>
+              <span className="text-lg font-semibold">ArmaDEX</span>
             </div>
             <div className="text-sm text-text-muted">
               Protected by advanced MEV detection algorithms

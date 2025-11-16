@@ -15,6 +15,7 @@ import { userOrderService } from '../services/userOrderService';
 import { userBalanceService } from '../services/userBalanceService';
 import { TradingLogs } from './TradingLogs';
 import { BotBalances } from './BotBalances';
+import { realTradingSystemV2 } from '../services/realTradingSystemV2';
 
 interface TradingPair {
   id: string;
@@ -27,15 +28,17 @@ interface TradingPair {
 }
 
 interface OrderBookEntry {
-  id: string;
-  botId: string;
-  side: 'buy' | 'sell';
-  token: string;
-  amount: number;
+  id?: string;
+  botId?: string;
+  side?: 'buy' | 'sell';
+  token?: string;
+  amount?: number;
+  size?: number;
   price: number;
   total: number;
-  timestamp: number;
-  filled: boolean;
+  timestamp?: number;
+  filled?: boolean;
+  orders?: number;
 }
 
 export const ProfessionalTradingInterface: React.FC = () => {

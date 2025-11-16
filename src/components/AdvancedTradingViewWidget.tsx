@@ -113,6 +113,7 @@ export const AdvancedTradingViewWidget: React.FC<AdvancedTradingViewWidgetProps>
           details: true,
           hotlist: true,
           calendar: true,
+          // @ts-ignore - TradingView widget config
           show_popup_button: true,
           popup_width: '1000',
           popup_height: '650',

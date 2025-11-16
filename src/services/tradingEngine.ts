@@ -26,8 +26,8 @@ class TradingEngine {
   private feeWallet: ethers.Wallet;
   private dexContract?: ethers.Contract;
   
-  // РЕАЛЬНЫЕ адреса
-  private readonly DEX_ADDRESS = '0x72bfaa294E6443E944ECBdad428224cC050C658E'; // SimpleDEX
+  // РЕАЛЬНЫЕ адреса (из deployed_addresses.json)
+  private readonly DEX_ADDRESS = '0xCcA67eB690872566C1260F4777BfE7C79ff4047d'; // UNIVERSAL_DEX
   private readonly USDT_ADDRESS = '0x434897c0Be49cd3f8d9bed1e9C56F8016afd2Ee6';
   private readonly BTC_ADDRESS = '0xC941593909348e941420D5404Ab00b5363b1dDB4';
   private readonly ETH_ADDRESS = '0x13E5f0d98D1dA90931A481fe0CE9eDAb24bA2Ecb';

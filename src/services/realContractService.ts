@@ -145,7 +145,7 @@ class RealContractService {
             balance: balance,
             decimals: 6,
             address: tokenAddress,
-            name: 'TradeShield USDT',
+            name: 'ArmaDEX USDT',
             valueUSD: balance // USDT = 1 USD
           });
         }

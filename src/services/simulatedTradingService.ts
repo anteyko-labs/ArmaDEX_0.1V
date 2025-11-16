@@ -81,7 +81,7 @@ class SimulatedTradingService {
           balance: usdtBalanceFormatted,
           decimals: 6,
           address: CONTRACT_ADDRESSES.USDT_TOKEN,
-          name: 'TradeShield USDT',
+          name: 'ArmaDEX USDT',
           valueUSD: usdtBalanceFormatted
         },
         {
@@ -89,7 +89,7 @@ class SimulatedTradingService {
           balance: btcBalanceFormatted,
           decimals: 8,
           address: CONTRACT_ADDRESSES.BTC_TOKEN,
-          name: 'TradeShield BTC',
+          name: 'ArmaDEX BTC',
           valueUSD: btcBalanceFormatted * 110000 // Примерная цена BTC
         },
         {
@@ -97,7 +97,7 @@ class SimulatedTradingService {
           balance: ethBalanceFormatted,
           decimals: 18,
           address: CONTRACT_ADDRESSES.ETH_TOKEN,
-          name: 'TradeShield ETH',
+          name: 'ArmaDEX ETH',
           valueUSD: ethBalanceFormatted * 3000 // Примерная цена ETH
         }
       ];

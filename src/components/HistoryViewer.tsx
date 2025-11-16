@@ -1,12 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { persistentStorageService } from '../services/persistentStorageService';
+import { RealTrade, RealBot } from '../services/realBotService';
+
+interface SystemStats {
+  totalBots: number;
+  activeOrders: number;
+  totalFees: number;
+  totalVolume: number;
+  lastUpdate: number;
+}
+
+interface StorageStats {
+  dataSizeKB: number;
+  tradesCount: number;
+  logsCount: number;
+  usersCount: number;
+  lastUpdate: number;
+}
 
 export const HistoryViewer: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'trades' | 'bots' | 'stats' | 'storage'>('trades');
-  const [trades, setTrades] = useState([]);
-  const [bots, setBots] = useState([]);
-  const [stats, setStats] = useState(null);
-  const [storageStats, setStorageStats] = useState(null);
+  const [trades, setTrades] = useState<RealTrade[]>([]);
+  const [bots, setBots] = useState<RealBot[]>([]);
+  const [stats, setStats] = useState<SystemStats | null>(null);
+  const [storageStats, setStorageStats] = useState<StorageStats | null>(null);
 
   useEffect(() => {
     loadData();

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, DollarSign, TrendingUp } from 'lucide-react';
+import { Bot, DollarSign } from 'lucide-react';
 
 interface BotBalance {
   name: string;
@@ -51,7 +51,7 @@ export const BotBalances: React.FC<BotBalancesProps> = ({ balances }) => {
       <div className="flex-1 overflow-y-auto max-h-96">
         {balances.length > 0 ? (
           <div className="space-y-2 p-4">
-            {balances.map((bot, index) => (
+            {balances.map((bot) => (
               <div 
                 key={bot.address} 
                 className="bg-gray-800 rounded-lg p-3 border border-gray-700 hover:border-gray-600 transition-colors"

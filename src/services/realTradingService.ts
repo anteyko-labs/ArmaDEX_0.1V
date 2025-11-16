@@ -24,9 +24,9 @@ class RealTradingService {
   private dexContract?: ethers.Contract;
   private tokenRegistry?: ethers.Contract;
   
-  // РЕАЛЬНЫЕ адреса контрактов
-  private readonly DEX_ADDRESS = '0x72bfaa294E6443E944ECBdad428224cC050C658E'; // SimpleDEX
-  private readonly TOKEN_REGISTRY_ADDRESS = '0xb8b8F8f7Da48b335AF86cf845F5a0506989cc66A'; // TokenRegistry
+  // РЕАЛЬНЫЕ адреса контрактов (из deployed_addresses.json)
+  private readonly DEX_ADDRESS = '0xCcA67eB690872566C1260F4777BfE7C79ff4047d'; // UNIVERSAL_DEX
+  private readonly TOKEN_REGISTRY_ADDRESS = '0x0557CF561B428bCf9cDD8b49044E330Ae8BBDa34'; // TOKEN_REGISTRY
   
   // РЕАЛЬНЫЕ адреса токенов
   private readonly USDT_ADDRESS = '0x434897c0Be49cd3f8d9bed1e9C56F8016afd2Ee6';

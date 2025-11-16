@@ -5,13 +5,15 @@ interface CardProps {
   className?: string;
   padding?: 'none' | 'sm' | 'md' | 'lg';
   variant?: 'default' | 'outlined' | 'elevated';
+  hover?: boolean;
 }
 
 export const Card: React.FC<CardProps> = ({
   children,
   className = '',
   padding = 'md',
-  variant = 'default'
+  variant = 'default',
+  hover = true
 }) => {
   const paddingClasses = {
     none: '',

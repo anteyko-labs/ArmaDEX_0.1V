@@ -19,7 +19,7 @@ export const TokenManagement: React.FC = () => {
   const [tokens] = useState<Token[]>([
     {
       id: 'TSD',
-      name: 'TradeShield Dollar',
+      name: 'ArmaDEX Dollar',
       symbol: 'TSD',
       balance: 5420.50,
       value: 1.05,
@@ -30,7 +30,7 @@ export const TokenManagement: React.FC = () => {
     },
     {
       id: 'TSP',
-      name: 'TradeShield Protocol',
+      name: 'ArmaDEX Protocol',
       symbol: 'TSP',
       balance: 8930.25,
       value: 0.85,
@@ -41,7 +41,7 @@ export const TokenManagement: React.FC = () => {
     },
     {
       id: 'TSN',
-      name: 'TradeShield Network',
+      name: 'ArmaDEX Network',
       symbol: 'TSN',
       balance: 12500,
       value: 0.42,
